@@ -31,12 +31,15 @@ class Grass:
 
 
 def enter():
-    global grass,character,ui_top,notes,time
+    global grass,character,ui_top,notes,time,bgm
     grass=Grass()
     character = Character()
     ui_top=Ui_top()
     notes=[]
     time=0
+    bgm=load_music("Praystation.mp3")
+    bgm.get_volume()
+    bgm.play()
 
 
 
