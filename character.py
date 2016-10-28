@@ -5,11 +5,12 @@ from judge import*
 
 idle,left_move,right_move=0,1,2
 
+
 class Character:
     def __init__(self):
         self.image = load_image('test_white.png')
-        self.x=0
-        self.y=40
+        self.x=0.0
+        self.y=40.0
         self.width=100
         self.height=100
         self.move_time=0
@@ -28,7 +29,7 @@ class Character:
             self.state = left_move
             self.move_time=0
 
-    def update(self):
+    def update(self,frame_time):
         if(self.state==idle):
             pass
         elif(self.state==right_move):
@@ -37,7 +38,7 @@ class Character:
                 self.move_time=0
             else:
                 if (self.x < 800):
-                    self.x+=1
+                    self.x+=frame_time*300
                     self.move_time+=1
                     self.judge.update(self)
             pass
@@ -47,7 +48,7 @@ class Character:
                 self.move_time = 0
             else:
                 if (self.x > 0):
-                    self.x -= 1
+                    self.x -= frame_time*300
                     self.move_time += 1
                     self.judge.update(self)
 

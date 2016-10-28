@@ -19,8 +19,17 @@ score_miss=0
 key=0
 
 
+frame_time=0.0
+current_time = 0.0
 
 
+def get_frame_time():
+
+    global current_time
+
+    frame_time = get_time() - current_time
+    current_time += frame_time
+    return frame_time
 
 class Grass:
     def __init__(self):
@@ -96,7 +105,9 @@ def update():
     global time
     global score_perfect,score_good,score_miss
     global key
-    character.update()
+    global frame_time
+    frame_time=get_frame_time()
+    character.update(frame_time)
     time+=1
     if time%300 == 0:
 
