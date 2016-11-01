@@ -49,7 +49,11 @@ def enter():
     bgm=load_music("Praystation.mp3")
     bgm.get_volume()
     bgm.play()
-
+    f=open('pa.txt','rb')
+    mp_list=f.readlines()
+    f.close()
+    for mpl in mp_list:
+        print(mpl)
 
 
 
