@@ -19,26 +19,26 @@ class JudgeLine:
         self.y=Character.y
 
     def check(self,note,key):
-        x2 = self.x + 100
+        x2 = self.x + self.width/2
         if(key==0):
-            if (note.x <= self.x - 30):
+            if (note.mid <= self.x - 30):
                 return self.miss
             return False
         else:
-            if(note.x>x2+70):
+            if(note.mid>x2+70):
                 return False
             if((key== 1 and note.line==1)
                or (key== 2 and note.line==2)
                or (key== 3 and note.line==3)
                or (key== 4 and note.line==4)):
                 self.sound.play()
-                if (note.x <= self.x - 30or note.x>x2+30):
+                if (note.mid <= self.x - 30or note.mid>x2+30):
                     return self.miss
-                elif(note.x>=self.x and note.x< x2-10):
+                elif(note.mid>=self.x and note.mid< x2-10):
                     return self.perfect
-                elif (note.x >= self.x-20 and note.x < self.x+20):
+                elif (note.mid >= self.x-20 and note.mid < self.x+20):
                     return self.good
-                elif (note.x >= x2-20 and note.x < x2+20):
+                elif (note.mid >= x2-20 and note.mid < x2+20):
                     return self.good
             else: return False
     def __del__(self):

@@ -18,11 +18,13 @@ class Note:
         self.width = 100
         self.height = 100
         self.line = line
+        self.mid=self.x+self.width/2
 
 
     def update(self):
         if (self.x > 0):
             self.x -= 1
+            self.mid-=1
 
     def draw(self):
         draw_rectangle(self.x, self.y, self.x + self.width, self.y + self.height)
