@@ -8,14 +8,17 @@ idle,left_move,right_move=0,1,2
 
 class Character:
     def __init__(self):
-        self.image = load_image('test_white.png')
+        self.image = load_image('프론.png')
         self.x=0.0
         self.y=40.0
         self.width=100
         self.height=100
         self.move_time=0
+        self.sprite_x=0
+        self.sprite_y=0
         self.state=idle
         self.judge=JudgeLine(self)
+        self.sprite_time=0
 
 
 
@@ -30,8 +33,12 @@ class Character:
             self.move_time=0
 
     def update(self,frame_time):
+        self.sprite_time+=frame_time
+
         if(self.state==idle):
-            pass
+            if(self.sprite_time>1/10.0):
+                self.sprite_x=(self.sprite_x+1)%6
+                self.sprite_time=0
         elif(self.state==right_move):
             if(self.move_time>30):
                 self.state=idle
@@ -53,7 +60,8 @@ class Character:
                     self.judge.update(self)
 
     def draw(self):
-        self.image.clip_draw(0,0,10,10,self.x+self.width/2,self.y+self.height/2,self.width,self.height)
+        if(self.state==idle):
+            self.image.clip_draw(self.sprite_x*102,2527-(170*1),102,170,self.x+self.width/2,self.y+self.height/2,self.width,self.height)
         draw_rectangle(self.x,self.y,self.x+self.width,self.y+self.height)
         self.judge.draw()
 
