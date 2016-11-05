@@ -48,6 +48,9 @@ class Character:
                     self.x+=frame_time*300
                     self.move_time+=1
                     self.judge.update(self)
+                    if (self.sprite_time > 1 / 10.0):
+                        self.sprite_x = (self.sprite_x + 1) % 6
+                        self.sprite_time = 0
             pass
         elif (self.state == left_move):
             if (self.move_time > 30):
@@ -58,9 +61,12 @@ class Character:
                     self.x -= frame_time*300
                     self.move_time += 1
                     self.judge.update(self)
+                    if (self.sprite_time > 1 / 10.0):
+                        self.sprite_x = (self.sprite_x + 1) % 6
+                        self.sprite_time = 0
 
     def draw(self):
-        if(self.state==idle):
+        if(True):
             self.image.clip_draw(self.sprite_x*102,2527-(170*1),102,170,self.x+self.width/2,self.y+self.height/2,self.width,self.height)
         draw_rectangle(self.x,self.y,self.x+self.width,self.y+self.height)
         self.judge.draw()
