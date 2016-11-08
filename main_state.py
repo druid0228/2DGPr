@@ -46,9 +46,11 @@ def enter():
     ui_top=Ui_top()
     notes=[]
     time=0
-    #bgm=load_music("Praystation.mp3")
-    #bgm.get_volume()
-    #bgm.play()
+    bgm=load_music("Praystation.mp3")
+    bgm.get_volume()
+    bgm.play()
+    global font
+    font=load_font("ENCR10B.TTF",20)
     #f=open('pa.txt','rb')
     #mp_list=f.readlines()
     #f.close()
@@ -58,11 +60,14 @@ def enter():
 
 
 def exit():
-    global grass,character,ui_top,notes
+    global grass,character,ui_top,notes,bgm,font
+    bgm.stop()
+    del(bgm)
     del(grass)
     del(character)
     del(ui_top)
     del(notes)
+    del(font)
 
 
 def pause():
@@ -113,10 +118,11 @@ def update():
     frame_time=get_frame_time()
     character.update(frame_time)
     time+=1
-    if time%300 == 0:
-
+    if time%100 == 0:
+        #notes.append(Note(random.randint(1,4)))
         #notes.append(Note(random.randint(1,4)))
         notes.append(Note(1))
+        notes.append(Note(3))
     for note in notes:
             #Pass
         if(character.judge.check(note,key)==False):
@@ -148,9 +154,13 @@ def draw():
 
     character.draw()
     ui_top.draw()
+    draw_time(700,500)
 
     update_canvas()
 
+def draw_time(x,y):
+    global font
+    font.draw(x,y,"%f"%(get_time()),(0,0,0))
 
 
 
