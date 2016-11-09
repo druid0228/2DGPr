@@ -11,7 +11,9 @@ class JudgeLine:
         self.good=2
         self.miss=3
         self.sound = load_wav("alert.wav")
+        self.sound2 = load_wav("GUNFIRE2.wav")
         self.sound.get_volume()
+        self.sound2.get_volume()
     def draw(self):
         draw_rectangle(self.x,self.y,self.x+self.width,self.y+self.height)
     def update(self,Character):
@@ -22,6 +24,7 @@ class JudgeLine:
         x2 = self.x + self.width/2
         if(key==0):
             if (note.mid <= self.x - 30):
+                self.sound2.play()
                 return self.miss
             return False
         else:
