@@ -120,7 +120,7 @@ def update():
     time+=1
     if time%100 == 0:
         notes.append(Note(random.randint(1,4)))
-        #notes.append(Note(random.randint(1,4)))
+        notes.append(Note(random.randint(1,4)))
         #notes.append(Note(1))
         #notes.append(Note(3))
     for note in notes:
