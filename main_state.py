@@ -125,10 +125,8 @@ def update():
         #notes.append(Note(3))
     for note in notes:
             #Pass
-        if(character.judge.check(note,key)==False):
-            continue
+        if(character.judge.check(note,key)!=False):
             #Score
-        else:
             if (character.judge.check(note,key) == Perfect):
                 score_perfect+=1
                 print('perfect')
