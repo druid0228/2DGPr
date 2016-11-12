@@ -38,7 +38,7 @@ class JudgeLine:
                or (key== 4 and note.line==4)):
                 self.sounds[self.soundCount].play()
                 self.soundCount=(self.soundCount+1)%4
-                if (note.mid <= self.x - 30or note.mid>x2+30):
+                if (note.mid <= self.x - 30or note.mid>x2+20):
                     return self.miss
                 elif(note.mid>=self.x and note.mid< x2-10):
                     return self.perfect
