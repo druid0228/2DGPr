@@ -9,7 +9,7 @@ idle,left_move,right_move=0,1,2
 class Character:
     def __init__(self):
         self.image = load_image('프론.png')
-        self.x=0.0
+        self.x=50.0
         self.y=40.0
         self.width=100
         self.height=100

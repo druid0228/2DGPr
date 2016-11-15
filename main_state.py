@@ -12,6 +12,7 @@ name = "MainState"
 
 grass = None
 font = None
+
 time=0
 score_perfect=0
 score_good=0
@@ -67,7 +68,7 @@ def enter():
     bgm.get_volume()
     bgm.play()
     global font
-    font=load_font("ENCR10B.TTF",20)
+    font=load_font("ENCR10B.TTF",60)
     global background
     background=BackGround()
     #f=open('pa.txt','rb')
@@ -178,6 +179,7 @@ def update():
     key=0
 
 def draw():
+    global font
     clear_canvas()
     background.draw()
     ui_top.draw()
@@ -189,7 +191,10 @@ def draw():
     ui_top.draw()
     draw_time(700,500)
 
+    font.draw(60,170,"%d"%(combo),(100,200,255))
+    font.draw(100, 550, "MaxCombo %d" % (maxCombo), (100, 0, 255))
     update_canvas()
+
 
 def draw_time(x,y):
     global font

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6b6f90b-5eea-476f-9ce8-567a4611901b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/judge.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/note.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_folder/wall.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wall2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/character.py" afterPath="$PROJECT_DIR$/character.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_state.py" afterPath="$PROJECT_DIR$/main_state.py" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,14 +22,14 @@
     <favorites_list name="project" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.61877024">
+    <splitter split-orientation="horizontal" split-proportion="0.41359222">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="character.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/character.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+                <state relative-caret-position="125">
+                  <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
                   <folding>
                     <element signature="e#1#21#0" expanded="true" />
                   </folding>
@@ -54,20 +51,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main_state.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="main_state.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main_state.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
+                <state relative-caret-position="214">
+                  <caret line="185" column="16" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
                   <folding>
-                    <element signature="e#323#439#0" expanded="false" />
-                    <element signature="e#3057#4283#0" expanded="false" />
+                    <element signature="e#324#440#0" expanded="false" />
+                    <element signature="e#3058#4284#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UI_top.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="UI_top.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/UI_top.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
@@ -123,7 +120,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="title_state.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="title_state.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/title_state.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="514">
@@ -138,18 +135,18 @@
           <file leaf-file-name="pico2d.py" pinned="false" current-in-tab="false">
             <entry file="file://C:/python/Lib/site-packages/pico2d.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="199">
+                <state relative-caret-position="-776">
                   <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="judge.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="judge.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/judge.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="311">
-                  <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+                <state relative-caret-position="361">
+                  <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
                   <folding />
                 </state>
               </provider>
@@ -226,14 +223,14 @@
         <option value="$PROJECT_DIR$/UI_top.py" />
         <option value="$PROJECT_DIR$/monster.py" />
         <option value="$PROJECT_DIR$/start_state.py" />
-        <option value="$PROJECT_DIR$/character.py" />
         <option value="$PROJECT_DIR$/char2.py" />
         <option value="$PROJECT_DIR$/test_folder/test_time_print.py" />
         <option value="$PROJECT_DIR$/test_folder/todo" />
-        <option value="$PROJECT_DIR$/judge.py" />
         <option value="$PROJECT_DIR$/note.py" />
         <option value="$PROJECT_DIR$/title_state.py" />
+        <option value="$PROJECT_DIR$/character.py" />
         <option value="$PROJECT_DIR$/main_state.py" />
+        <option value="$PROJECT_DIR$/judge.py" />
       </list>
     </option>
   </component>
@@ -607,9 +604,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="0" width="1913" height="1038" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17202573" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17202573" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -705,8 +702,8 @@
         <state relative-caret-position="25">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
-            <element signature="e#323#439#0" expanded="false" />
-            <element signature="e#3057#4283#0" expanded="false" />
+            <element signature="e#324#440#0" expanded="false" />
+            <element signature="e#3058#4284#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -923,14 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/python/Lib/site-packages/pico2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grass.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -941,29 +930,6 @@
         <state relative-caret-position="204">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/judge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/judge.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,17 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
-          <folding>
-            <element signature="e#323#439#0" expanded="false" />
-            <element signature="e#3057#4283#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_folder/test_time_print.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -1039,6 +994,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#1#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="185" column="16" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
+          <folding>
+            <element signature="e#324#440#0" expanded="false" />
+            <element signature="e#3058#4284#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/python/Lib/site-packages/pico2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-776">
+          <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/judge.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/judge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
           <folding />
         </state>
       </provider>
