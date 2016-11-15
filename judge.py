@@ -13,11 +13,14 @@ class JudgeLine:
         self.sounds = [load_wav("alert.wav")for i in range(4)]
         self.soundCount=0
         self.sound2 = load_wav("GUNFIRE2.wav")
+        self.image=load_image("judge.png")
         for sound in self.sounds:
             sound.get_volume()
         #self.sound2.get_volume()
     def draw(self):
         draw_rectangle(self.x,self.y,self.x+self.width,self.y+self.height)
+        self.image.opacify(90)
+        self.image.clip_draw_to_origin(100,0,self.width,self.height-100,self.x,self.y)
     def update(self,Character):
         self.x=Character.x+Character.width+30
         self.y=Character.y
@@ -48,5 +51,4 @@ class JudgeLine:
                     return self.good
             else: return False
     def __del__(self):
-
         pass

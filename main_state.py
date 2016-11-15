@@ -17,6 +17,8 @@ score_perfect=0
 score_good=0
 score_miss=0
 key=0
+combo=0
+maxCombo=0
 
 
 frame_time=0.0
@@ -34,10 +36,25 @@ def get_frame_time():
 class Grass:
     def __init__(self):
         self.image = load_image('grass.png')
+        self.frame=0
 
     def draw(self):
-        self.image.draw(400, 30)
+        #self.image.draw(400, 30)
+        self.image.clip_draw_to_origin(self.frame, 0, 800 - self.frame, 62, 0, 0)
+        self.image.clip_draw_to_origin(0, 0, self.frame, 62, 800 - self.frame, 0)
+    def update(self):
+        self.frame=(self.frame+1)%801
 
+class BackGround:
+    def __init__(self):
+        self.image=load_image('back.png')
+        self.frame=0
+
+    def draw(self):
+        self.image.clip_draw_to_origin(self.frame,0,1000-self.frame,600,0,30)
+        self.image.clip_draw_to_origin(0,0,self.frame,600,1000-self.frame,30)
+    def update(self):
+        self.frame=(self.frame+1)%1001
 
 def enter():
     global grass,character,ui_top,notes,time,bgm
@@ -51,6 +68,8 @@ def enter():
     bgm.play()
     global font
     font=load_font("ENCR10B.TTF",20)
+    global background
+    background=BackGround()
     #f=open('pa.txt','rb')
     #mp_list=f.readlines()
     #f.close()
@@ -60,7 +79,7 @@ def enter():
 
 
 def exit():
-    global grass,character,ui_top,notes,bgm,font
+    global grass,character,ui_top,notes,bgm,font,background
     bgm.stop()
     del(bgm)
     del(grass)
@@ -68,6 +87,7 @@ def exit():
     del(ui_top)
     del(notes)
     del(font)
+    del(background)
 
 
 def pause():
@@ -88,25 +108,25 @@ def handle_events():
         elif event.type==SDL_KEYDOWN and event.key==SDLK_ESCAPE:
             game_framework.change_state(title_state)
             #tmp_move
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_a:
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_LEFT:
             character.move_left()
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_s:
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_RIGHT:
             character.move_right()
             #tmp_append
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_d:
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_m:
             notes.append(Note(1))
             notes.append(Note(4))
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_e:
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_n:
             notes.append(Note(2))
             notes.append(Note(3))
             #tmp_key
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_z:
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_d:
             key=1
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_x:
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_f:
             key=2
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_c:
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_j:
             key=3
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_v:
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_k:
             key=4
 
 Perfect,good,miss=1,2,3
@@ -115,12 +135,20 @@ def update():
     global score_perfect,score_good,score_miss
     global key
     global frame_time
+    global background,grass
+    global combo,maxCombo
     frame_time=get_frame_time()
+    time += 1
+    grass.update()
+    if time % 4 == 0:
+        background.update()
+
     character.update(frame_time)
-    time+=1
+
+
     if time%100 == 0:
         notes.append(Note(random.randint(1,4)))
-        notes.append(Note(random.randint(1,4)))
+        #notes.append(Note(random.randint(1,4)))
         
         #notes.append(Note(1))
         #notes.append(Note(3))
@@ -130,12 +158,17 @@ def update():
             #Score
             if (character.judge.check(note,key) == Perfect):
                 score_perfect+=1
+                combo+=1
+                maxCombo=max(maxCombo,combo)
                 print('perfect')
             elif (character.judge.check(note,key) == good):
                 score_good+=1
+                combo += 1
+                maxCombo = max(maxCombo, combo)
                 print('good')
             elif (character.judge.check(note,key) == miss):
                 score_miss+=1
+                combo=0
                 print('miss')
             notes.remove(note)
 
@@ -146,6 +179,7 @@ def update():
 
 def draw():
     clear_canvas()
+    background.draw()
     ui_top.draw()
     grass.draw()
     for note in notes:
