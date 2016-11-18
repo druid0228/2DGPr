@@ -21,12 +21,16 @@ class Maro:
         self.height = 100
         self.line = line
         self.mid=self.x+self.width/2
+        self.mad=10
+        self.aa=29
 
 
     def update(self):
         if (self.x > 0):
             self.x -= 1
             self.mid-=1
+        self.mad+=1
+        self.aa-=2
 
     def draw(self):
         draw_rectangle(self.x, self.y, self.x + self.width, self.y + self.height)
