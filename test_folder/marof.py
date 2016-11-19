@@ -19,6 +19,10 @@ class Maro:
             self.y = start_state.scr_height - 600
         self.width = 100
         self.height = 100
+        self.swidth = 100
+        self.cheight = 100
+        self.dwidth = 100
+        self.dheight = 100
         self.line = line
         self.mid=self.x+self.width/2
         self.mad=10
@@ -31,6 +35,7 @@ class Maro:
             self.mid-=1
         self.mad+=1
         self.aa-=2
+
 
     def draw(self):
         draw_rectangle(self.x, self.y, self.x + self.width, self.y + self.height)
