@@ -26,6 +26,8 @@ class Maro:
         self.line = line
         self.mid=self.x+self.width/2
         self.mad=10
+        self.dwidth = self.x + self.width / 2+self.dwidth
+        self.mad = 10
         self.aa=29
 
 
