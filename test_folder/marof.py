@@ -23,6 +23,9 @@ class Maro:
         self.cheight = 100
         self.dwidth = 100
         self.dheight = 100
+        self.zheight = 100
+        self.zwidth = 100
+        self.zheight = 100
         self.line = line
         self.mid=self.x+self.width/2
         self.mad=10
