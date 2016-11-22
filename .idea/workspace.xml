@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6b6f90b-5eea-476f-9ce8-567a4611901b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_folder/nadisab" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_folder/marof.py" afterPath="$PROJECT_DIR$/test_folder/marof.py" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +40,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="2015182015.txt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="2015182015.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/2015182015.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="500">
@@ -83,10 +83,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="note.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="note.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/note.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="250">
+                <state relative-caret-position="450">
                   <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
@@ -151,14 +151,44 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="marof.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="marof.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/test_folder/marof.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="610">
+                <state relative-caret-position="650">
                   <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mp.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mp.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="31" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="nadisab" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test_folder/nadisab">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="50">
+                  <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="todo" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test_folder/todo">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1875">
+                  <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="83" selection-end-column="39" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -190,13 +220,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="back.png" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/back.png">
-              <provider selected="true" editor-type-id="images">
-                <state />
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="title.png" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/title.png">
               <provider selected="true" editor-type-id="images">
@@ -204,22 +227,8 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_white.png" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test_white.png">
-              <provider selected="true" editor-type-id="images">
-                <state />
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="wall.jpg" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/wall.jpg">
-              <provider selected="true" editor-type-id="images">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="note.png" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/note.png">
               <provider selected="true" editor-type-id="images">
                 <state />
               </provider>
@@ -256,12 +265,13 @@
         <option value="$PROJECT_DIR$/judge.py" />
         <option value="$PROJECT_DIR$/main_state.py" />
         <option value="$PROJECT_DIR$/test_folder/marof.py" />
+        <option value="$PROJECT_DIR$/test_folder/nadisab" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="139" />
-    <option name="y" value="16" />
+    <option name="x" value="308" />
+    <option name="y" value="24" />
     <option name="width" value="1513" />
     <option name="height" value="1008" />
   </component>
@@ -310,6 +320,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -344,7 +355,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -629,7 +639,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="139" y="16" width="1513" height="1008" extended-state="0" />
+    <frame x="308" y="24" width="1513" height="1008" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21896316" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -680,24 +690,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/title_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/python/Lib/site-packages/pico2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.2/system/python_stubs/121723227/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88700">
@@ -868,13 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_folder/todo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="93" column="39" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/char2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -959,14 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2015182015.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game_framework.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2150">
@@ -1034,9 +1011,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_folder/marof.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/note.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="450">
           <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
@@ -1044,13 +1031,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_folder/marof.py">
+    <entry file="file://$PROJECT_DIR$/2015182015.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="500">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_folder/todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="83" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_folder/nadisab">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
