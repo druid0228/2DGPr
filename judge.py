@@ -49,6 +49,14 @@ class JudgeLine:
                     return self.good
                 elif (note.mid >= x2-20 and note.mid < x2+20):
                     return self.good
+                #if (note.mid <= self.x - 40or note.mid>x2+30):
+                #    return self.miss
+                #elif(note.mid>=self.x and note.mid< x2-10):
+                #    return self.perfect
+                #elif (note.mid >= self.x-20 and note.mid < self.x+20):
+                #    return self.good
+                #elif (note.mid >= x2-20 and note.mid < x2+20):
+                #    return self.good
             else: return False
     def __del__(self):
         pass
