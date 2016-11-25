@@ -1,0 +1,166 @@
+   6 /* basic directed graph type */
+   7 /* the implementation uses adjacency lists
+   8  * represented as variable-length arrays */
+   9 
+  10 /* these arrays may or may not be sorted: if one gets long enough
+  11  * and you call graph_has_edge on its source, it will be */
+  12 
+  13 struct graph {
+  14     int n;              /* number of vertices */
+  15     int m;              /* number of edges */
+  16     struct successors {
+  17         int d;          /* number of successors */
+  18         int len;        /* number of slots in array */
+  19         char is_sorted; /* true if list is already sorted */
+  20         int list[1];    /* actual list of successors */
+  21     } *alist[1];
+  22 };
+  23 
+  24 /* create a new graph with n vertices labeled 0..n-1 and no edges */
+  25 Graph
+  26 graph_create(int n)
+  27 {
+  28     Graph g;
+  29     int i;
+  30 
+  31     g = malloc(sizeof(struct graph) + sizeof(struct successors *) * (n-1));
+  32     assert(g);
+  33 
+  34     g->n = n;
+  35     g->m = 0;
+  36 
+  37     for(i = 0; i < n; i++) {
+  38         g->alist[i] = malloc(sizeof(struct successors));
+  39         assert(g->alist[i]);
+  40 
+  41         g->alist[i]->d = 0;
+  42         g->alist[i]->len = 1;
+  43         g->alist[i]->is_sorted= 1;
+  44     }
+  45     
+  46     return g;
+  47 }
+  48 
+  49 /* free all space used by graph */
+  50 void
+  51 graph_destroy(Graph g)
+  52 {
+  53     int i;
+  54 
+  55     for(i = 0; i < g->n; i++) free(g->alist[i]);
+  56     free(g);
+  57 }
+  58 
+  59 /* add an edge to an existing graph */
+  60 void
+  61 graph_add_edge(Graph g, int u, int v)
+  62 {
+  63     assert(u >= 0);
+  64     assert(u < g->n);
+  65     assert(v >= 0);
+  66     assert(v < g->n);
+  67 
+  68     /* do we need to grow the list? */
+  69     while(g->alist[u]->d >= g->alist[u]->len) {
+  70         g->alist[u]->len *= 2;
+  71         g->alist[u] =
+  72             realloc(g->alist[u], 
+  73                 sizeof(struct successors) + sizeof(int) * (g->alist[u]->len - 1));
+  74     }
+  75 
+  76     /* now add the new sink */
+  77     g->alist[u]->list[g->alist[u]->d++] = v;
+  78     g->alist[u]->is_sorted = 0;
+  79 
+  80     /* bump edge count */
+  81     g->m++;
+  82 }
+  83 
+  84 /* return the number of vertices in the graph */
+  85 int
+  86 graph_vertex_count(Graph g)
+  87 {
+  88     return g->n;
+  89 }
+  90 
+  91 /* return the number of vertices in the graph */
+  92 int
+  93 graph_edge_count(Graph g)
+  94 {
+  95     return g->m;
+  96 }
+  97 
+  98 /* return the out-degree of a vertex */
+  99 int
+ 100 graph_out_degree(Graph g, int source)
+ 101 {
+ 102     assert(source >= 0);
+ 103     assert(source < g->n);
+ 104 
+ 105     return g->alist[source]->d;
+ 106 }
+ 107 
+ 108 /* when we are willing to call bsearch */
+ 109 #define BSEARCH_THRESHOLD (10)
+ 110 
+ 111 static int
+ 112 intcmp(const void *a, const void *b)
+ 113 {
+ 114     return *((const int *) a) - *((const int *) b);
+ 115 }
+ 116 
+ 117 /* return 1 if edge (source, sink) exists), 0 otherwise */
+ 118 int
+ 119 graph_has_edge(Graph g, int source, int sink)
+ 120 {
+ 121     int i;
+ 122 
+ 123     assert(source >= 0);
+ 124     assert(source < g->n);
+ 125     assert(sink >= 0);
+ 126     assert(sink < g->n);
+ 127 
+ 128     if(graph_out_degree(g, source) >= BSEARCH_THRESHOLD) {
+ 129         /* make sure it is sorted */
+ 130         if(! g->alist[source]->is_sorted) {
+ 131             qsort(g->alist[source]->list,
+ 132                     g->alist[source]->d,
+ 133                     sizeof(int),
+ 134                     intcmp);
+ 135         }
+ 136         
+ 137         /* call bsearch to do binary search for us */
+ 138         return 
+ 139             bsearch(&sink,
+ 140                     g->alist[source]->list,
+ 141                     g->alist[source]->d,
+ 142                     sizeof(int),
+ 143                     intcmp)
+ 144             != 0;
+ 145     } else {
+ 146         /* just do a simple linear search */
+ 147         /* we could call lfind for this, but why bother? */
+ 148         for(i = 0; i < g->alist[source]->d; i++) {
+ 149             if(g->alist[source]->list[i] == sink) return 1;
+ 150         }
+ 151         /* else */
+ 152         return 0;
+ 153     }
+ 154 }
+ 155 
+ 156 /* invoke f on all edges (u,v) with source u */
+ 157 /* supplying data as final parameter to f */
+ 158 void
+ 159 graph_foreach(Graph g, int source,
+ 160     void (*f)(Graph g, int source, int sink, void *data),
+ 161     void *data)
+ 162 {
+ 163     int i;
+ 164 
+ 165     assert(source >= 0);
+ 166     assert(source < g->n);
+ 167 
+ 168     for(i = 0; i < g->alist[source]->d; i++) {
+ 169         f(g, source, g->alist[source]->list[i], data);
+ 170     }
+ 171 }
