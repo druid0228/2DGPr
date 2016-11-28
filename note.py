@@ -3,11 +3,11 @@ import start_state
 
 line_one, line_two, line_three, line_four = 1, 2, 3, 4
 
-
 class Note:
     def __init__(self, line):
         self.x = start_state.scr_width - 50
         self.image=load_image("note.png")
+        self.keysound=load_wav("alert.wav")
 
         if (line == line_one):
             self.y = start_state.scr_height - 300
@@ -27,6 +27,13 @@ class Note:
         if (self.x > 0):
             self.x -= 1
             self.mid-=1
+
+    def sound(self,type):
+        self.keysound.get_volume()
+        self.keysound.set_volume(30)
+        self.keysound.play(1)
+
+
 
     def draw(self):
         draw_rectangle(self.x, self.y, self.x + self.width, self.y + self.height)

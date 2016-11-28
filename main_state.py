@@ -165,16 +165,19 @@ def update():
                 combo+=1
                 maxCombo=max(maxCombo,combo)
                 print('perfect')
+                note.sound(0)
             elif (character.judge.check(note,key) == good):
                 score_good+=1
                 combo += 1
                 maxCombo = max(maxCombo, combo)
                 print('good')
+                note.sound(0)
             elif (character.judge.check(note,key) == miss):
                 score_miss+=1
                 combo=0
                 print('miss')
-            notes.remove(note)
+                note.sound(0)
+            #notes.remove(note)
 
 
     for note in notes:
